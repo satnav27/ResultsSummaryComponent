@@ -1,0 +1,286 @@
+// typography
+$font-stack: "Hanken Grotesk", sans-serif;
+$font-weight-500: 500;
+$font-weight-700: 700;
+$font-weight-800: 800;
+$font-size-p: 18px;
+
+// primaery colors
+$color-light-red: hsl(0, 100%, 67%);
+$color-orange-yellow: hsl(39, 100%, 56%);
+$color-green-teal: hsl(166, 100%, 37%);
+$color-cobalt-blue: hsl(234, 85%, 45%);
+
+//gradients background
+$gradient-light-slate-blue: hsl(252, 100%, 67%);
+$gradient-light-royal-blue: hsl(241, 81%, 54%);
+// gradients circle
+$gradient-violet-blue: hsl(256, 72%, 46%);
+$gradient-persian-blue: hsl(241, 72%, 46%);
+
+// neutral
+$neutral-white: hsl(0, 0%, 100%);
+$neutral-pale-blue: hsl(221, 100%, 96%);
+$neutral-light-lavender: hsl(241, 100%, 89%);
+$neutral-dark-gray-blue: hsl(224, 30%, 27%);
+
+:root 
+  --font-stack: #{$font-stack};
+  --font-weight-500: #{$font-weight-500};
+  --font-weight-700: #{$font-weight-700};
+  --font-weight-800: #{$font-weight-800};
+  --font-size-p: #{$font-size-p};
+
+  --color-light-red: #{$color-light-red};
+  --color-orange-yellow: #{$color-orange-yellow};
+  --color-green-teal: #{$color-green-teal};
+  --color-cobalt-blue: #{$color-cobalt-blue};
+
+  --gradient-light-slate-blue: #{$gradient-light-slate-blue};
+  --gradient-light-royal-blue: #{$gradient-light-royal-blue};
+
+  --gradient-violet-blue: #{$gradient-violet-blue};
+  --gradient-persian-blue: #{$gradient-persian-blue};
+
+  --neutral-white: #{$neutral-white};
+  --neutral-pale-blue: #{$neutral-pale-blue};
+  --neutral-light-lavender: #{$neutral-light-lavender};
+  --neutral-dark-gray-blue: #{$neutral-dark-gray-blue};
+
+
+* 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-stack);
+  //border: 1px solid red
+ 
+
+
+body 
+    background-color: var(--neutral-white)
+    color: var(--neutral-white)
+    overflow-x: hidden
+    
+
+.container
+  width: 100%
+  min-height: 100vh
+
+  @media screen and (min-width: 840px) 
+        display: flex
+        flex-direction: row
+        width:700px
+        height: 500px
+        justify-content: center
+        align-items: center
+        margin: 0 auto
+        
+    
+  
+.result-content
+    background: linear-gradient(
+        to bottom, 
+            var(--gradient-light-slate-blue), 
+            var(--color-cobalt-blue));
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    padding-bottom: 30px
+    border-bottom-left-radius: 30px
+    border-bottom-right-radius: 30px
+    width: 100%
+
+    @media screen and (min-width: 840px)
+        border-radius:  30px
+        height: 55%
+        width: 55%
+        justify-content: space-around
+        align-items: center
+       
+        
+
+    
+
+.header-text
+    margin-top: 20px
+    color: var(--neutral-light-lavender)
+    font-size: 18px
+
+    @media screen and (min-width: 840px)
+        font-size: 22px
+
+        
+       
+.score
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    margin-top: 20px;
+    width: 150px
+    height: 150px
+    background: linear-gradient( to bottom,
+    var(--gradient-violet-blue),
+    var(--color-cobalt-blue))
+    border-radius: 50%
+    
+    @media screen and (min-width: 840px) 
+        width: 200px
+        height: 200px
+        margin: 0
+ 
+.score-num
+    font-size: 62px
+    font-weight: var(--font-weight-800)
+
+    @media screen and (min-width: 840px) 
+        font-size: 68px
+
+
+   
+.score-100
+    font-size: 16px
+    color: var(--neutral-light-lavender)
+    font-weight: var(--font-weight-500)
+
+    @media screen and (min-width: 840px) 
+        font-size: 16px
+        padding-top: 10px
+
+
+.score-text
+    margin-top: 20px
+    font-size: 24px
+    font-weight: var(--font-weight-700)
+    color: var(--neutral-white)
+
+    @media screen and (min-width: 840px) 
+        font-size: 28px
+        margin-top: 10px
+
+.score-desc
+    margin: 10px 20px 0px 20px
+    font-size: 15px
+    color: var(--neutral-light-lavender)
+    text-align: center
+    padding: 0 20px
+    font-weight: var(--font-weight-500)
+
+    @media screen and (min-width: 840px) 
+        margin: 0 40px 20px 40px
+        padding: 0;
+    
+
+.summary-content
+    color: var(--neutral-dark-gray-blue)
+    padding: 25px 30px;
+    width: 100%;
+    box-sizing: border-box
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    max-height: 100vh
+    max-width: 840px
+    margin: 0 auto
+
+    @media screen and (min-width: 840px)
+        height: 55%
+        width: 45%
+        box-shadow: 8px 0 18px rgba(0, 0, 0, 0.15);
+        border-top-right-radius: 30px
+        border-bottom-right-radius: 30px
+
+.summary-heading
+    font-size: var(--font-size-p)
+
+    @media screen and (min-width: 840px) 
+        font-size: 23px
+
+.summary-item-container 
+    width: 100%
+    max-width: 100%
+    margin: 0 auto
+    box-sizing: border-box
+  
+.summary-item
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    margin-top: 24px
+    width: 100%
+    box-sizing: border-box
+
+    @media screen and (min-width: 840px)
+        margin-top: 55px
+       
+    
+
+.img-text
+    display: flex
+    align-items: center
+
+.reaction 
+    font-weight: var(--font-weight-500)
+    font-size: 16px
+    color: var(--color-light-red)
+    padding-left: 10px
+
+.memory 
+    font-weight: var(--font-weight-500)
+    font-size: 16px
+    color: var(--color-orange-yellow)
+    padding-left: 10px
+
+
+.verbal
+    font-weight: var(--font-weight-500)
+    font-size: 16px
+    color: var(--color-green-teal)
+    padding-left: 10px
+
+.visual
+    font-weight: var(--font-weight-500)
+    font-size: 16px
+    color: var(--color-cobalt-blue)
+    padding-left: 10px
+
+.reaction, .memory, .verbal, .visual
+  
+  overflow: hidden
+  text-overflow: ellipsis
+
+  @media screen and (min-width: 840px)
+     font-size: 18px
+
+.sum-result
+    color: grey
+    font-weight: var(--font-weight-500)
+     font-size: 18px
+
+.num-bold
+    color: var(--neutral-dark-gray-blue)
+    font-weight: var(--font-weight-800)    
+
+.continue
+  width: 100%;
+  max-width: 840px;
+  margin: 30px auto;
+
+  @media screen and (min-width: 840px)
+    margin-top: 60px
+
+   
+button
+    color: var(--neutral-white)
+    background-color: var(--neutral-dark-gray-blue)
+    padding: 15px
+    width: 100%
+    border-radius: 30px
+    font-size: var(--font-size-p)
+    box-sizing: border-box
+
+    
+
