@@ -20,6 +20,7 @@
 
 * {
   font-family: var(--font-stack);
+  box-sizing: border-box;
 }
 
 body {
@@ -75,6 +76,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-sizing: content-box;
   padding: 20px;
   width: 100px;
   height: 100px;
@@ -122,12 +124,20 @@ body {
 @media screen and (min-width: 840px) {
   .summary-section {
     width: 400px;
+    margin: 0;
+    padding-left: 30px;
+    box-shadow: 10 5px 5px black;
   }
 }
 
 .summary-section-main-heading {
   font-size: var(--font-size-p);
   margin-top: 5px;
+}
+@media screen and (min-width: 840px) {
+  .summary-section-main-heading {
+    margin-top: 0px;
+  }
 }
 
 .summary-item {
